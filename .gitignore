@@ -3,6 +3,8 @@ projects/Accordion/dll/*
 projects/Accordion/node_module/*
 # Thumbnails
 ._*
+*.xml
+*.iml
 
 projects/*/node_modules/*
 projects/*/dll/*
