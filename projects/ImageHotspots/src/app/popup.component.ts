@@ -11,12 +11,12 @@ import {PopupService} from './popup.service';
 })
 
 export class PopUpComponent implements OnInit {
-    title = "Why u not working!";
+    title = 'Why u not working!';
     popups: Popup[];
     errorMessage: string;
     @Input() hotspotID: number;
 
-    constructor(private popupService: PopupService,) {
+    constructor(private popupService: PopupService) {
     }
 
     ngOnInit(): void {
@@ -24,7 +24,6 @@ export class PopUpComponent implements OnInit {
     }
 
     getPopUps() {
-        this.popupService
         this.popupService.getPopups()
             .subscribe(
                 popups => this.popups = popups,
@@ -36,6 +35,6 @@ export class PopUpComponent implements OnInit {
         return {
             top: popup.top + 'vw',
             left: popup.left + 'vw',
-        }
+        };
     };
 }
